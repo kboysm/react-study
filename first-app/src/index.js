@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App test={"테스트 데이터 props"} />
   </React.StrictMode>,
   document.getElementById('root')
 );
