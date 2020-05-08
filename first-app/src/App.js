@@ -26,13 +26,16 @@ class App extends React.Component {
   }
   render() {
     // const { name, age } = this.props; //ES6
-    const { person } = this.state;
+    const { person } = this.state;// state 같은 경우 갱신을 위한 함수를 따로 만들어야 한다.
     return (
       <div className="App">
         <h1>{this.props.test}</h1>
-        <Person name={person[0].name} age={person[0].age} />
-        <Person name={person[1].name} age={person[1].age} />
-        <Person name={person[2].name} age={person[2].age} />
+        <Person name={person[0].name}
+          age={person[0].age}
+          st={this.state}
+          myfun={() => console.log("LSM")} //myfun을 집어 넣어도 됌 const myfun =() =>{console.log("LSM")} 이런 함수를 
+        />
+        {/* 안녕하세요! */}
       </div>
     )
   }

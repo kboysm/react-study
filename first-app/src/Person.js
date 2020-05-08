@@ -13,16 +13,19 @@ class Person extends React.Component {
         return (
             <div>
                 <h1>이름 : {name} , 나이는 : {age}</h1>
+                {/* <h2>{this.props.children}</h2> */}
+                {this.props.myfun()}
+                {console.log(this.props.st)}
             </div>
         )
     }
 }
 
-// 1.const Person = (props) => (
-// 2.const Person = ({ name, age }) => (
-//     <div>
-//         <h1>이름 : {name} , 나이는 : {age}</h1>
-//     </div>
+// const Person = (props) => (
+// const Person = ({ name, age }) => (
+// <div>
+//     <h1>이름 : {name} , 나이는 : {age}</h1>
+// </div>
 // )
 // export default person
 export { Person };
