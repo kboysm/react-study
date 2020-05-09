@@ -1,7 +1,7 @@
 import React from 'react';
 const Display = ({ value }) =>
-    <div>
-        <h1>
+    <div className="box">
+        <h1 className="title is-1">
             {value}
         </h1>
     </div>

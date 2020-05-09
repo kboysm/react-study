@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from './Button';
 import Display from './Display'
+import './App.css'
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -17,16 +18,15 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="container has-text-centered">
         <Display value={this.state.number}></Display>
-        <Button onClickHandler={() => this.onClickHandler(1)}>증가</Button>
-        <Button onClickHandler={() => this.onClickHandler(-1)}>감소</Button>
+        <Button className="button is-primary is-fullwidth" onClickHandler={() => this.onClickHandler(1)}>증가</Button>
+        <Button className="button is-info is-fullwidth" onClickHandler={() => this.onClickHandler(-1)}>감소</Button>
+
       </div>
     );
   }
 }
-
-
 
 
 export default App;
