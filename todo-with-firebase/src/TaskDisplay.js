@@ -1,9 +1,9 @@
 import React from 'react'
 
 const TaskDisplay = ({ tasks, deleteHandler }) => {
-    const taskDisplay = tasks.map((task, i) => {
+    const taskDisplay = tasks.map((task) => {
         return (
-            <div key={i} className="box">
+            <div key={task.id} className="box">
                 <div className="level">
                     <div className="level-left">
                         <p className="title">{task.todo}</p>
@@ -11,7 +11,7 @@ const TaskDisplay = ({ tasks, deleteHandler }) => {
                     <div className="level-right">
                         <button
                             className="button is-danger"
-                            onClick={() => deleteHandler(i)}>삭제</button>
+                            onClick={() => deleteHandler(task.id)}>삭제</button>
                     </div>
                 </div>
             </div>
