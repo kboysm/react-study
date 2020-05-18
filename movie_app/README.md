@@ -22,3 +22,9 @@ yarn add prop-types로 모듈을 다운로드 후 해당 컴포넌트에
     } //이런 식으로 건네받는 props의 타입을 지정
 
 ```
+
+Component Lifecycle
+
+Render : componentWillMount() -> render() -> componentDidMount()
+
+update: componentWillReceiveProps() -> shouldComponentUpdate() ->componentWillUpdate() ->render() ->componentDidUpdate()
