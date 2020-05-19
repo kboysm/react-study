@@ -87,3 +87,16 @@ MoviePoster.propTypes = {
 }
 export default Movie
 ```
+
+### 궁금했던 것들과 해결
+
+1.r.json()을 return하지 않았는데 왜 다음 then으로 data가 이동하는거지??
+```
+ _callApi = () => {
+    return fetch('https://yts.mx/api/v2/list_movies.json?sort_by=rating') //ajax로 url을 불러옴
+      .then(r => r.json())
+      .then(j => console.log(j))
+      .catch(e => console.log(e.message))
+  }
+```
+해답 : arrow function은 return이 자동이라서 쓸 필요가 없다고 한다
