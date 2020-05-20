@@ -100,3 +100,6 @@ export default Movie
   }
 ```
 해답 : arrow function은 return이 자동이라서 쓸 필요가 없다고 한다
+
+### 완성!
+![Movie_App_Img](https://user-images.githubusercontent.com/51103479/82421397-ecc33780-9abb-11ea-9384-a0c96d2f2f10.JPG)
