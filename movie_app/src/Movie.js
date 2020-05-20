@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import LinesEllipsis from 'react-lines-ellipsis'
 import './Movie.css'
-
 // class Movie extends React.Component {
 
 //     static propTypes = {
@@ -35,19 +35,25 @@ import './Movie.css'
 function Movie({ title, poster, genres, synopsis }) {
     return (
         <div className="Movie">
-            <div className="Movie_Colums">
+            <div className="Movie_Column">
                 <MoviePoster poster={poster} alt={title} />
             </div>
-            <div className="Movie_Columns"></div>
-            <h1>{title}</h1>
-            <div className="Movie_Genres">
-                {genres.map((genres, index) => <MovieGenres genres={genres} key={index} />
-                )}
-            </div>
-            <p className="Movie_Synopsis">
-                {synopsis}
-            </p>
-        </div>
+            <div className="Movie_Column">
+                <h1>{title}</h1>
+                <div className="Movie_Genres">
+                    {genres.map((genres, index) => <MovieGenres genres={genres} key={index} />
+                    )}
+                </div>
+                <p className="Movie_Synopsis">
+                    <LinesEllipsis
+                        text={synopsis}
+                        maxLine="3"
+                        ellipsis="..."
+                        trimRight
+                        basedOn="letters"
+                    />
+                </p>
+            </div></div>
     )
 }
 function MoviePoster({ poster, alt }) {

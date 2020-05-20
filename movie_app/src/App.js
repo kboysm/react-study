@@ -34,15 +34,16 @@ class App extends React.Component {
   }
 
   _callApi = () => {
-    return fetch('https://yts.mx/api/v2/list_movies.json?sort_by=rating') //ajax로 url을 불러옴
+    return fetch('https://yts.mx/api/v2/list_movies.json?sort_by=download_count') //ajax로 url을 불러옴
       .then(r => r.json())
       .then(j => j.data.movies)
       .catch(e => console.log(e.message))
   }
 
   render() {
+    const { movies } = this.state
     return (
-      <div className="App">
+      <div className={movies ? "App" : "App--loading"}>
         {this.state.movies ? this._renderMovies() : "Loading"}
       </div>
     )
