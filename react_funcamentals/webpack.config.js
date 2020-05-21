@@ -20,12 +20,13 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                loader: 'babel-loader',
-                exclude: /node_modules/,
-                query: {
+                loaders: ['react-hot-loader/webpack', 'babel-loader?' + JSON.stringify({
                     cacheDirectory: true,
                     presets: ['es2015', 'react']
-                }
+
+                })],
+                exclude: /node_modules/,
+
             }
         ]
     },
