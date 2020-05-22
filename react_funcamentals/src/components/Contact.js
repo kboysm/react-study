@@ -1,6 +1,7 @@
 import React from 'react'
 import ConteactInfo from './ContactInfo'
 import ContactDetails from './ContactDetails'
+import ContactCreate from './ContactCreate'
 import update from 'react-addons-update'
 export default class Contact extends React.Component {
 
@@ -99,6 +100,9 @@ export default class Contact extends React.Component {
                     isSelected={this.state.selectedKey != -1}
                     contact={this.state.contactData[this.state.selectedKey]}
                 />
+                <ContactCreate
+
+                    onCreate={this.handleCreate} />
             </div>
         )
     }
