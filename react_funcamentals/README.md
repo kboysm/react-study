@@ -27,6 +27,24 @@ module: {
 ## 함수 복습
 
 String.toLowerCase() : 문자열을 소문자로 변환
+
 indexOf() : String 객체에서 주어진 값과 일치하는 첫 번째 인덱스를 반환합니다. 일치하는 값이 없으면 -1을 반환
+
 arr.sort([compareFunction]) :  compareFunction이 없을 시 오름차순으로 정렬한 배열을 반환
+
 Array.filter() : 테스트를 통과한 요소로 이루어진 새로운 배열. 어떤 요소도 테스트를 통과하지 못했으면 빈 배열을 반환
+
+Array.prototype.slice() : begin부터 end까지에 대한 얖은 복사본을 새로운 배열 객체로 반환
+
+```
+const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+console.log(animals.slice(2));
+// expected output: Array ["camel", "duck", "elephant"]
+
+console.log(animals.slice(2, 4));
+// expected output: Array ["camel", "duck"]
+
+console.log(animals.slice(1, 5));
+// expected output: Array ["bison", "camel", "duck", "elephant"]
+```
