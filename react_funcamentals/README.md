@@ -48,3 +48,7 @@ console.log(animals.slice(2, 4));
 console.log(animals.slice(1, 5));
 // expected output: Array ["bison", "camel", "duck", "elephant"]
 ```
+
+## memo
+
+ref : react.js에서 id와 비슷한 개념이다 id,ref 둘다 사용해도 되는 경우는 ref를 사용하는게 맞다고 한다
